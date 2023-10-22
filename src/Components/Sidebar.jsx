@@ -42,6 +42,7 @@ width: 100%;
 .topLinks{
   display:flex;
   flex-direction: column;
+  margin-top: 1rem;
 
   .logo{
     text-align: center;
@@ -49,6 +50,7 @@ width: 100%;
     img{
       max-inline-size: 80%;
       block-size: auto;
+      margin-bottom: 1rem;
     }
   }
   ul{

@@ -15,6 +15,8 @@ React.useEffect(() => {
                     "Content-Type": "application/json"
                 }
             })
+
+            
             const {items} = response.data
             const playlists = items.map(playlist => {
                 return {
@@ -36,12 +38,20 @@ React.useEffect(() => {
 }, [token,dispatch])
 
 
+const changeCurrentPlaylist = async (selectedPlaylistId) => {
+    dispatch({
+        type: 'SET_PLAYLIST_ID',
+        selectedPlaylistId: selectedPlaylistId
+    })
+}
+
+
   return (
     <Container>
         <ul>
             {
                 playlists.map(playlist => {
-                    return <li key={playlist.id}>{playlist.name}</li>
+                    return <li key={playlist.id} onClick={(id)=>{changeCurrentPlaylist(playlist.id)}}>{playlist.name}</li>
                 })
             }
             

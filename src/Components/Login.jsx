@@ -22,7 +22,16 @@ function Login() {
     'user-top-read',
     'user-read-recently-played',
     'user-follow-read',
-    'user-follow-modify'];
+    'user-follow-modify',
+    'user-read-playback-state',
+    'user-modify-playback-state',
+    'user-read-currently-playing',
+    'app-remote-control',
+    'streaming',
+    'user-read-playback-position',
+    'user-read-recently-played',
+
+];
     window.location = `${apiUrl}?client_id=${ClientId}&redirect_uri=${redirectUrl}&scope=${scope.join(" ")}&response_type=token&show_dialog=true`;
   }
 
