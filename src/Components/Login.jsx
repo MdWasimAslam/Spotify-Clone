@@ -10,6 +10,9 @@ function Login() {
   const handleClick = () => {
     const ClientId ="8a2c0d12a6764b019fb404e6e032d7b7";
     const redirectUrl = "http://localhost:3000/";
+    // Use this for deployment
+    // const redirectUrl = "http://spotifyclone.wasimaslam.cloud/";
+
     const apiUrl ="https://accounts.spotify.com/authorize";
     const scope =['user-read-private',
     'user-read-email',
